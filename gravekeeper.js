@@ -19,7 +19,7 @@ async function searchDadJokes(term) {
 }
 
 client.on("ready", () => {
-    console.log(`logged in as ${client.user.tag}`);
+    console.log('logged in as ${client.user.tag}');
 });
 
 client.on("guildMemberAdd", member => {
@@ -39,9 +39,16 @@ client.on("message", async (message) => {
 
     const text = message.content.toLowerCase();
 
-    //If the doesn't specifically mention, bot return
-    if (text.includes("@here") || text.includes("@everyone")) return;
+    //If the doesn't specifically mention, bot says aye aye
+    if (text.includes("@here") || text.includes("@everyone")){
+        message.reply("Aye, aye!");
+    }
 
+    try{
+    
+    }
+    catch (error){
+        message.reply("Sorry, I made a short trip to the other side. Takes time to get used to this mortal world, ya know!")
     let result;
 
     try {
@@ -67,7 +74,7 @@ client.on("message", async (message) => {
         message.reply(result.joke);
     }
     catch (error) {
-        message.reply("Sorry, an error occured")
+        message.reply("Sorry, I made a short trip to the other side. Takes time to get used to this mortal world, ya know!")
     }
 });
 
