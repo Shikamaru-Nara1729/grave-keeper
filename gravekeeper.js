@@ -44,14 +44,14 @@ client.on("message", async (message) => {
         message.reply("Aye, aye!");
     }
 
-    try{
-        if (message.mentions.has(client.user.id)){
-            message.reply("Wut?");
-        }
-    }
-    catch (error){
-        message.reply("Sorry, I made a short trip to the other side. Takes time to get used to this mortal world, ya know!")
-    }
+    //try{
+    //    if (message.mentions.has(client.user.id)){
+    //        message.reply("Wut?");
+    //    }
+    //}
+    //catch (error){
+    //    message.reply("Sorry, I made a short trip to the other side. Takes time to get used to this mortal world, ya know!")
+    //}
     let result;
 
     try {
