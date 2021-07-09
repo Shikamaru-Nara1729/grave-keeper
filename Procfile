@@ -1,1 +1,1 @@
-web: node gravekeeper.js
+worker: node gravekeeper.js
